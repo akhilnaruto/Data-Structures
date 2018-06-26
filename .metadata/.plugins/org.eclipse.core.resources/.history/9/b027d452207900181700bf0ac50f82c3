@@ -1,0 +1,15 @@
+package BinaryTrees;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TreeTest {
+
+	@Test
+	public void testInsert() {
+		 Tree tree = new Tree();
+		 tree.insertNode(key, data);
+	}
+
+}

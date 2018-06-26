@@ -1,0 +1,10 @@
+package BinaryTrees;
+
+public class Tree {
+  private  Node root;
+  
+  public void findNode(int key){
+	  
+  }
+    
+}

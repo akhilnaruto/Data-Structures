@@ -1,0 +1,13 @@
+package BinaryTrees;
+
+public class LogHelper {
+    static boolean shouldLog = false;
+    
+    static void logForLeftNode(){
+    	 System.out.println("inserted "+newNode.iData+" at left node of "+ lastSeenNotNullNode.iData);
+    }
+    
+    static void logForRightNode(Node newNode, Node lastSeenNotNullNode){
+    	 System.out.println("inserted "+newNode.iData+" at right node of "+ lastSeenNotNullNode.iData);
+    }
+}

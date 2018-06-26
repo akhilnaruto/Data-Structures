@@ -1,0 +1,24 @@
+package BinaryTrees;
+
+public class LogHelper {
+    static boolean shouldLog = false;
+    
+    static void logForLeftNode(Node newNode, Node lastSeenNotNullNode){
+    	if(shouldLog){
+    		System.out.println("inserted "+newNode.iData+" at left node of "+ lastSeenNotNullNode.iData);
+    		printLine();
+    	}
+    	   
+    }
+    
+    static void logForRightNode(Node newNode, Node lastSeenNotNullNode){
+    	if(shouldLog){
+    		 System.out.println("inserted "+newNode.iData+" at right node of "+ lastSeenNotNullNode.iData);
+    		 printLine();
+    	}  
+    }
+    
+    static void printLine(){
+    	 System.out.println("============");
+    }
+}

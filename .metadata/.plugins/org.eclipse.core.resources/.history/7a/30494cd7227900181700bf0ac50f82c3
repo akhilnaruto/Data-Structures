@@ -1,0 +1,74 @@
+package BinaryTrees;
+
+public class Tree {
+  private  Node root;
+  private boolean shouldLog = false;
+  
+  public Node findNode(int key){
+	  Node current = root;
+	  while(current.iData != key){
+		  if(key > current.iData){
+			  current = current.rightNode;
+		  }else{
+			  current = current.leftNode;
+		  }
+		  
+		  if(current == null){
+			  return null;
+		  }
+	  }	
+	  return current;
+  }
+  
+  public void insertNode(int key, double data){
+	  Node newNode = new Node(key, data);
+	  
+	  Node current = root;
+	  Node lastSeenNotNullNode = null;  
+	  if(current == null){
+		  root = newNode;
+		  return;
+	  }
+	  while(true){
+		  lastSeenNotNullNode = current;
+		  if(key >= current.iData){
+			  current = current.rightNode;
+			  if(shouldLog)
+			       System.out.println("current node is "+ lastSeenNotNullNode.iData);
+			  if(current == null){
+				  lastSeenNotNullNode.rightNode = newNode;
+				  if(shouldLog){
+					  System.out.println("inserted "+newNode.iData+" at right node of "+ lastSeenNotNullNode.iData);
+				      System.out.println("============");
+				  }
+
+				  return;
+			  }		  
+		  }else{
+			  current = current.leftNode;
+			  if(shouldLog)
+			       System.out.println("current node is "+ lastSeenNotNullNode.iData);
+			  if(current == null){
+				  lastSeenNotNullNode.leftNode = newNode;
+				  if(shouldLog){
+					  System.out.println("inserted at right node of "+ lastSeenNotNullNode.iData);
+				      System.out.println("============");
+				  }
+				     
+				  return;
+			  }
+		  }	  
+		  
+	  }
+  }
+  
+  public void deleteNode(int key){
+	  
+  }
+
+  public void log(boolean log) {
+		this.shouldLog = log;
+		
+  }
+    
+}

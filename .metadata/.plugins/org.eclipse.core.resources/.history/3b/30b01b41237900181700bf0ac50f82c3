@@ -1,0 +1,13 @@
+package BinaryTrees;
+
+public class LogHelper {
+    static boolean shouldLog = false;
+    
+    static void logForLeftNode(){
+    	
+    }
+    
+    static void logForRightNode(){
+    	
+    }
+}

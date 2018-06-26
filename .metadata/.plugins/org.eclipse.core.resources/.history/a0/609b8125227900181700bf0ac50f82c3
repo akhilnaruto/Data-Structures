@@ -1,0 +1,31 @@
+package BinaryTrees;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class TreeTest {
+
+	static Tree tree;
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		 tree = new Tree();
+		 tree.insertNode(1, 1);
+		 tree.log(false);
+	}
+
+	@Test
+	public void testInsert() {
+		// insert nodes
+		tree.insertNode(12, 12.0);
+		tree.insertNode(7, 7.0);
+		tree.insertNode(5, 5.0);
+		
+		// validate inserted nodes
+		Node node = tree.findNode(5);
+		assertEquals(node.iData, 5.0, 0);
+		assertEquals(node.fData, 5.0, 0);
+	}
+
+}

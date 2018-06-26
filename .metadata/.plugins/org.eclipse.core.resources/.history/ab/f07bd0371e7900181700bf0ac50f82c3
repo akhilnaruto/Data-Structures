@@ -1,0 +1,9 @@
+package BinaryTrees;
+
+public class Node {
+   double fData;
+   int iData;
+   
+   Node leftNode;
+   Node rightNode;
+}

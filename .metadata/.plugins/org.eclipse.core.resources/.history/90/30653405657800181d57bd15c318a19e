@@ -1,0 +1,28 @@
+package BinaryTrees;
+
+public class Tree {
+  private  Node root;
+  
+  public void findNode(int key){
+	  Node current = root;
+	  while(current.iData != key){
+		  if(key > current.iData){
+			  current = current.rightNode;
+		  }else{
+			  current = current.leftNode;
+		  }
+		  
+	  }
+		  
+	  
+  }
+  
+  public void insertNode(int key, double data){
+	  
+  }
+  
+  public void deleteNode(int key){
+	  
+  }
+    
+}

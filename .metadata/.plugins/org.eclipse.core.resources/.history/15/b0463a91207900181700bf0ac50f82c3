@@ -1,0 +1,22 @@
+package BinaryTrees;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class TreeTest {
+
+	static Tree tree;
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		 tree = new Tree();
+		 tree.insertNode(1, 1);
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
